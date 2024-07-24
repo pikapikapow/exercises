@@ -114,7 +114,7 @@ age_to_day(4);
 // calculates the mean of a set of numbers
 
 function mean(array) {
-  total = 0;
+  let total = 0;
   for (let i = 0; i < array.length; i++) {
     total += array[i];
   }
@@ -135,12 +135,20 @@ function profit(prob, prize, pay) {
 
 profit(0.8, 92, 60);
 
-// function minMax(array) {
-//   small_num = 0;
-//   big_number = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     if (i = 0  array[i] < small_num) {
+// finds the smallest and biggest numbers in an array
 
-//     }
-//   }
-// }
+function minMax(array) {
+  let small_num = 0;
+  let big_number = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > big_number || i === 0) {
+      big_number = array[i];
+    } else if (array[i] < small_num || i === 0) {
+      small_num = array[i];
+    }
+  }
+  console.log("The biggest number is " + big_number);
+  console.log("The smallest number is " + small_num);
+}
+
+minMax([-5, -7, 4, 22, 0]);
