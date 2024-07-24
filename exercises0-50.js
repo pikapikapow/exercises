@@ -152,3 +152,15 @@ function minMax(array) {
 }
 
 minMax([-5, -7, 4, 22, 0]);
+
+// turns a hex into binary
+
+function hexToBinary(hex) {
+  let num = parseInt(hex, 16);
+
+  let binary = num.toString(2);
+
+  console.log(binary);
+}
+
+hexToBinary("AAAA");
