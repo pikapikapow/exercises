@@ -164,3 +164,19 @@ function hexToBinary(hex) {
 }
 
 hexToBinary("AAAA");
+
+// Checks if its time for milk and cookies
+
+function christmasEve(newDate) {
+  let date = newDate.getDate();
+  let month = newDate.getMonth();
+  let year = newDate.getFullYear();
+  console.log(`${date} / ${month + 1} / ${year}`);
+  if (date === 24 && month === 11) {
+    console.log("Yum");
+  } else {
+    console.log("False");
+  }
+}
+
+christmasEve(new Date(2015, 11, 24));
