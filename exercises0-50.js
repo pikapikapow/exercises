@@ -147,8 +147,10 @@ function minMax(array) {
       small_num = array[i];
     }
   }
+
   console.log("The biggest number is " + big_number);
   console.log("The smallest number is " + small_num);
+  return small_num, big_number;
 }
 
 minMax([-5, -7, 4, 22, 0]);
@@ -180,3 +182,42 @@ function christmasEve(newDate) {
 }
 
 christmasEve(new Date(2015, 11, 24));
+
+function higherFunction(f, g) {
+  if (f() > g()) {
+    return "f";
+  } else if (g() > f()) {
+    return "g";
+  } else if (g() === f()) {
+    return "neither";
+  }
+}
+
+console.log(
+  higherFunction(
+    function f() {
+      return 2;
+    },
+    function g() {
+      return 4;
+    }
+  )
+);
+
+function swap(a, b) {
+  console.log(b, a);
+}
+
+swap(3, 6);
+
+function numberSplit(num) {
+  if (num % 2 === 0) {
+    console.log([num / 2, num / 2]);
+  } else if (num % 2 === 1) {
+    console.log([num / 2 - 0.5, num / 2 + 0.5]);
+  } else {
+    console.log("What?");
+  }
+}
+
+numberSplit(91);
