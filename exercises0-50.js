@@ -221,3 +221,52 @@ function numberSplit(num) {
 }
 
 numberSplit(91);
+
+function FizzBuzz(num) {
+  let fizzedbuzzed = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      fizzedbuzzed.push("FizzBuzz");
+    } else if (i % 3 === 0) {
+      fizzedbuzzed.push("Fizz");
+    } else if (i % 5 === 0) {
+      fizzedbuzzed.push("Buzz");
+    } else {
+      fizzedbuzzed.push(i);
+    }
+  }
+  return fizzedbuzzed;
+}
+
+console.log(FizzBuzz(40));
+
+function rectangles(n) {
+  let numOfRectangles = ((n * (n + 1)) / 2) ** 2;
+  return numOfRectangles;
+}
+
+console.log(rectangles(3));
+
+function evenOrOdd(numstring) {
+  evens = 0;
+  odds = 0;
+  let digits = numstring.split("").map(Number);
+  for (let i = 0; i < digits.length; i++) {
+    if (digits[i] % 2 === 0) {
+      evens += digits[i];
+    } else {
+      odds += digits[i];
+    }
+  }
+  if (evens > odds) {
+    return "Evens is greater than odds";
+  } else if (odds > evens) {
+    return "Odds is greater than evens";
+  } else if (odds === evens) {
+    return "Odds and evens are the same";
+  } else {
+    return "How did you get this message?";
+  }
+}
+
+console.log(evenOrOdd("16263535"));
