@@ -270,3 +270,13 @@ function evenOrOdd(numstring) {
 }
 
 console.log(evenOrOdd("16263535"));
+
+function sumOfCubes(n) {
+  let sum = 0;
+  for (let i = 0; i < n.length; i++) {
+    sum += n[i] ** 3;
+  }
+  return sum;
+}
+
+console.log(sumOfCubes([3, 5, 8]));
