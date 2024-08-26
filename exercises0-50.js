@@ -365,16 +365,31 @@
 
 // console.log(leftShift(5, 2));
 
-function highestDigit(num) {
-  let bignum = 0;
-  let arr = num.toString().split("");
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > bignum) {
-      bignum = arr[i];
-    } else {
-      continue;
-    }
-  }
-  return bignum;
+// function highestDigit(num) {
+//   let bignum = 0;
+//   let arr = num.toString().split("");
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > bignum) {
+//       bignum = arr[i];
+//     } else {
+//       continue;
+//     }
+//   }
+//   return bignum;
+// }
+// console.log(highestDigit(346));
+
+// function numberOfDigits(num) {
+//   let digits = num.toString().split("");
+//   return digits.length;
+// }
+
+// console.log(numberOfDigits(20202020));
+
+function numReverse(num) {
+  let digits = num.toString().split("");
+  let reverse = digits.reverse();
+  return reverse.join("");
 }
-console.log(highestDigit(346));
+
+console.log(numReverse(341));
