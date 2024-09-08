@@ -386,10 +386,31 @@
 
 // console.log(numberOfDigits(20202020));
 
-function numReverse(num) {
-  let digits = num.toString().split("");
-  let reverse = digits.reverse();
-  return reverse.join("");
+// function numReverse(num) {
+//   let digits = num.toString().split("");
+//   let reverse = digits.reverse();
+//   return reverse.join("");
+// }
+
+// console.log(numReverse(341));
+
+// function absValueSum(arr) {
+//   absSum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     absSum += Math.abs(arr[i]);
+//   }
+//   console.log(absSum);
+// }
+
+// absValueSum([3, -5, 3]);
+
+function meanCalculator(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  let mean = sum / arr.length;
+  return mean;
 }
 
-console.log(numReverse(341));
+console.log(meanCalculator([3, 5, 7, 8, 9]));
