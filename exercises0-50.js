@@ -379,12 +379,16 @@
 // }
 // console.log(highestDigit(346));
 
+// Checks the amount of digits in a number
+
 // function numberOfDigits(num) {
 //   let digits = num.toString().split("");
 //   return digits.length;
 // }
 
 // console.log(numberOfDigits(20202020));
+
+// Reverse the digits in a number
 
 // function numReverse(num) {
 //   let digits = num.toString().split("");
@@ -393,6 +397,8 @@
 // }
 
 // console.log(numReverse(341));
+
+// Calculates the sum of the absolute values of an array
 
 // function absValueSum(arr) {
 //   absSum = 0;
@@ -404,13 +410,28 @@
 
 // absValueSum([3, -5, 3]);
 
-function meanCalculator(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  let mean = sum / arr.length;
-  return mean;
-}
+// Calculates the mean for an array of numbers.
 
-console.log(meanCalculator([3, 5, 7, 8, 9]));
+// function meanCalculator(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   let mean = sum / arr.length;
+//   return mean;
+// }
+
+// console.log(meanCalculator([3, 5, 7, 8, 9]));
+
+// Sees if Maurice or Steve wins the snail race,
+// considering Maurice sacrifices his slowest snail for Steve's fastest, uses middle snail against Steve's slowest,
+// and Maurice's fastest goes against Steve's middle snail.
+
+// function snailRace(Maurice, Steve) {
+//   if (Maurice[1] > Steve[0] && Maurice[2] > Steve[1]) {
+//     return "Maurice wins!!!!!!!!!!";
+//   } else {
+//     return "Steve wins!!!!!!!!!!";
+//   }
+// }
+// console.log(snailRace([3, 9, 22], [5, 6, 7]));
