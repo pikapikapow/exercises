@@ -438,9 +438,27 @@
 
 // Right shifts a number
 
-function rightShiftDivision(dividend, rightshifter) {
-  let rightShifted = dividend / 2 ** rightshifter;
-  return rightShifted;
-}
+// function rightShiftDivision(dividend, rightshifter) {
+//   let rightShifted = dividend / 2 ** rightshifter;
+//   return rightShifted;
+// }
 
-console.log(rightShiftDivision(80, 3));
+// console.log(rightShiftDivision(80, 3));
+
+// finds the sum of all the internal polygon angles.
+
+// function polygonAngleFinder(angles) {
+//   let sumOfPolygonAngles = (angles - 2) * 180;
+//   return sumOfPolygonAngles;
+// }
+
+// console.log(polygonAngleFinder(7));
+
+// Simply adds "edabit" to whatever you just said.
+
+// function basicVariableAssignment(str) {
+//   let result = str + " Edabit";
+//   return result;
+// }
+
+// console.log(basicVariableAssignment("I have a gyatt"));
