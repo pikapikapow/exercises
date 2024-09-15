@@ -435,3 +435,12 @@
 //   }
 // }
 // console.log(snailRace([3, 9, 22], [5, 6, 7]));
+
+// Right shifts a number
+
+function rightShiftDivision(dividend, rightshifter) {
+  let rightShifted = dividend / 2 ** rightshifter;
+  return rightShifted;
+}
+
+console.log(rightShiftDivision(80, 3));
