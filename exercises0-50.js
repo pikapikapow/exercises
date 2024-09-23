@@ -461,4 +461,23 @@
 //   return result;
 // }
 
-// console.log(basicVariableAssignment("I have a gyatt"));
+// console.log(basicVariableAssignment("20 pieces of wood"));
+
+function detectWord(crowd) {
+  let hiddenWord = [];
+  let seperateLetters = crowd.split("");
+  for (let i = 0; i < seperateLetters.length; i++) {
+    let lowercase = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
+    let isItLowercase = lowercase.includes(seperateLetters[i]);
+    if (isItLowercase === true) {
+      hiddenWord.push(seperateLetters[i]);
+    } else {
+      continue;
+    }
+  }
+  let finalWord = hiddenWord.toString();
+  finalWord = finalWord.replace(/,/gi, "");
+  return finalWord;
+}
+
+console.log(detectWord("ABCDJFHcJFHSKFHSKFaJDHFHtJJDF"));
