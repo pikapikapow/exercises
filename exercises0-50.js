@@ -463,21 +463,56 @@
 
 // console.log(basicVariableAssignment("20 pieces of wood"));
 
-function detectWord(crowd) {
-  let hiddenWord = [];
-  let seperateLetters = crowd.split("");
-  for (let i = 0; i < seperateLetters.length; i++) {
-    let lowercase = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
-    let isItLowercase = lowercase.includes(seperateLetters[i]);
-    if (isItLowercase === true) {
-      hiddenWord.push(seperateLetters[i]);
-    } else {
-      continue;
-    }
-  }
-  let finalWord = hiddenWord.toString();
-  finalWord = finalWord.replace(/,/gi, "");
-  return finalWord;
+// function detectWord(crowd) {
+//   let hiddenWord = [];
+//   let seperateLetters = crowd.split("");
+//   for (let i = 0; i < seperateLetters.length; i++) {
+//     let lowercase = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
+//     let isItLowercase = lowercase.includes(seperateLetters[i]);
+//     if (isItLowercase === true) {
+//       hiddenWord.push(seperateLetters[i]);
+//     } else {
+//       continue;
+//     }
+//   }
+//   let finalWord = hiddenWord.toString();
+//   finalWord = finalWord.replace(/,/gi, "");
+//   return finalWord;
+// }
+
+// console.log(detectWord("ABCDJFHcJFHSKFHSKFaJDHFHtJJDF"));
+
+// calculates simple interest
+
+// function calcSimpleInterest(r, p, t) {
+//   let interest = r * p * t;
+//   console.log(interest);
+// }
+
+// calcSimpleInterest(0.09, 3000, 4);
+
+function showTime() {
+  let time = newDate();
+  let day = time.getDay();
+  let hour = time.getHours();
+  let seconds = time.getSeconds();
+  let timeShown =
+    "Today is " + day + "and the time is " + hour + ":" + seconds + ".";
+  return timeShown;
 }
 
-console.log(detectWord("ABCDJFHcJFHSKFHSKFaJDHFHtJJDF"));
+function isItALeapYear(year) {
+  if (year === "This year") {
+    let date = new Date();
+    let thisYear = date.getYear();
+    year = thisYear;
+  }
+
+  if (year % 4 === 0) {
+    return "Yes, that year is a leap year.";
+  } else {
+    return "No, that year is not a leap year.";
+  }
+}
+
+console.log(isItALeapYear(2022));
