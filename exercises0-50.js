@@ -1,3 +1,5 @@
+let inputValue = document.getElementById("numberpicker");
+
 // // add function; adds two values
 
 // function add(a, b) {
@@ -491,28 +493,45 @@
 
 // calcSimpleInterest(0.09, 3000, 4);
 
-function showTime() {
-  let time = newDate();
-  let day = time.getDay();
-  let hour = time.getHours();
-  let seconds = time.getSeconds();
-  let timeShown =
-    "Today is " + day + "and the time is " + hour + ":" + seconds + ".";
-  return timeShown;
-}
+// shows the time for that day
 
-function isItALeapYear(year) {
-  if (year === "This year") {
-    let date = new Date();
-    let thisYear = date.getYear();
-    year = thisYear;
-  }
+// function showTime() {
+//   let time = newDate();
+//   let day = time.getDay();
+//   let hour = time.getHours();
+//   let seconds = time.getSeconds();
+//   let timeShown =
+//     "Today is " + day + "and the time is " + hour + ":" + seconds + ".";
+//   return timeShown;
+// }
 
-  if (year % 4 === 0) {
-    return "Yes, that year is a leap year.";
-  } else {
-    return "No, that year is not a leap year.";
-  }
-}
+// checks if the year you put in is a leap year.
 
-console.log(isItALeapYear(2022));
+// function isItALeapYear(year) {
+//   if (year === "This year") {
+//     let date = new Date();
+//     let thisYear = date.getYear();
+//     year = thisYear;
+//   }
+
+//   if (year % 4 === 0) {
+//     return "Yes, that year is a leap year.";
+//   } else {
+//     return "No, that year is not a leap year.";
+//   }
+// }
+
+// console.log(isItALeapYear(2022))
+
+// Shows the time.
+
+// function whatIsTheTime() {
+//   let time = new Date();
+//   let year = time.getFullYear();
+//   let month = time.getMonth() + 1;
+//   let day = time.getDate();
+//   let date = month + "/" + day + "/" + year;
+//   return date;
+// }
+
+// console.log(whatIsTheTime());
