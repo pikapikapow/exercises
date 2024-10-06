@@ -535,3 +535,71 @@ let inputValue = document.getElementById("numberpicker");
 // }
 
 // console.log(whatIsTheTime());
+
+// Puts in a number, if it's less than 13 it finds the difference if its more, it returns 13 - number times negative 2.
+
+// function Operations13(num) {
+//   if (num <= 13) {
+//     return 13 - num;
+//   } else {
+//     return (13 - num) * -2
+//   }
+// }
+
+// console.log(Operations13(4));
+
+// Puts in 2 numbers, if they are different, they add it together, if they are the same, it returns triple the sum
+
+// function operationsSum(a, b) {
+//   if (a === b) {
+//     return 3 * (a + b);
+//   } else {
+//     return a + b;
+//   }
+// }
+
+// console.log(operationsSum(3, 7));
+
+// Checks if a given integer is within 20 of 100 or 400
+
+// function isItNear100(num) {
+//   if (num + 20 >= 100 || num - 20 <= 100) {
+//     return "True";
+//   } else if (num + 20 >= 400 || num - 20 <= 400) {
+//     return "True";
+//   } else {
+//     return "False";
+//   }
+// }
+
+// console.log(isItNear100(490));
+
+// Checks if a given number is a multiple of 3 or 7
+
+// function isItAMultipleOf3Or7(a) {
+//   if (a % 3 === 0) {
+//     return "True";
+//   } else if (a % 7 === 0) {
+//     return "True";
+//   } else {
+//     return "False";
+//   }
+// }
+
+// console.log(isItAMultipleOf3Or7(9));
+
+// Checks which of 3 integers is the greatest.
+
+// function greatest(a, b, c) {
+//   if (a === b && b === c) {
+//     return "All of them are equal.";
+//   } else if (a > b && a > c) {
+//     return a + " is the greatest!";
+//   } else if (b > a && b > c) {
+//     return b + " is the greatest!";
+//   } else if (c > a && c > b) {
+//     return c + " is the greatest!";
+//   }
+// }
+
+// console.log(greatest(10, 3, 4));
