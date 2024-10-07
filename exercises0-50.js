@@ -603,3 +603,17 @@ let inputValue = document.getElementById("numberpicker");
 // }
 
 // console.log(greatest(10, 3, 4));
+
+// Sees if two given numbers have one positive and one negative.
+
+function posAndNeg(a, b) {
+  if (a >= 0 && b < 0) {
+    return "Yes, one is positive and one is negative.";
+  } else if (b >= 0 && a < 0) {
+    return "Yes, one is positive and one is negative.";
+  } else {
+    return "No, both are positive or both are negative.";
+  }
+}
+
+console.log(posAndNeg(-2, -2));
