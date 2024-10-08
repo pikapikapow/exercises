@@ -606,14 +606,61 @@ let inputValue = document.getElementById("numberpicker");
 
 // Sees if two given numbers have one positive and one negative.
 
-function posAndNeg(a, b) {
-  if (a >= 0 && b < 0) {
-    return "Yes, one is positive and one is negative.";
-  } else if (b >= 0 && a < 0) {
-    return "Yes, one is positive and one is negative.";
-  } else {
-    return "No, both are positive or both are negative.";
-  }
+// function posAndNeg(a, b) {
+//   if (a >= 0 && b < 0) {
+//     return "Yes, one is positive and one is negative.";
+//   } else if (b >= 0 && a < 0) {
+//     return "Yes, one is positive and one is negative.";
+//   } else {
+//     return "No, both are positive or both are negative.";
+//   }
+// }
+
+// console.log(posAndNeg(-2, -2));
+
+// Checks if one of the two given integers is between 50 to 99
+
+// function in50To90(a, b) {
+//   if ((a >= 50 && a <= 99) || (b >= 50 && b <= 99)) {
+//     return "True";
+//   } else {
+//     return "False";
+//   }
+// }
+
+// console.log(in50To90(22, 22));
+
+// If the sum of two given integers are between 50 and 80, it returns 65, otherwise 80.
+
+// function sumChecker(a, b) {
+//   let sum = a + b;
+//   if (sum >= 50 && sum <= 80) {
+//     return 65;
+//   } else {
+//     return 80;
+//   }
+// }
+
+// console.log(sumChecker(3, 99));
+
+// Sees if one of two numbers is 15, or if the sum or difference is 15.
+
+// function isit15(a, b) {
+//   if (a === 15 || b === 15 || a + b === 15 || a - b === 15 || b - a === 15) {
+//     return "True";
+//   } else {
+//     return "False";
+//   }
+// }
+
+// console.log(isit15(18, 3));
+
+function intoHoursAndMinutes(num) {
+  let hours = (num - (num % 60)) / 60;
+  let minutes = num % 60;
+  let returnerMessage =
+    "That is " + hours + " hours and " + minutes + " minutes.";
+  return returnerMessage;
 }
 
-console.log(posAndNeg(-2, -2));
+console.log(intoHoursAndMinutes(368));
