@@ -655,12 +655,38 @@ let inputValue = document.getElementById("numberpicker");
 
 // console.log(isit15(18, 3));
 
-function intoHoursAndMinutes(num) {
-  let hours = (num - (num % 60)) / 60;
-  let minutes = num % 60;
-  let returnerMessage =
-    "That is " + hours + " hours and " + minutes + " minutes.";
-  return returnerMessage;
-}
+// Turns a number value into hours and minutes
 
-console.log(intoHoursAndMinutes(368));
+// function intoHoursAndMinutes(num) {
+//   let hours = (num - (num % 60)) / 60;
+//   let minutes = num % 60;
+//   let returnerMessage =
+//     "That is " + hours + " hours and " + minutes + " minutes.";
+//   return returnerMessage;
+// }
+
+// console.log(intoHoursAndMinutes(368));
+
+// Checks if the sum of two values is greater than 50 and less than 80.
+
+// function sumReturner(a, b) {
+//   if (a + b >= 50 && a + b <= 80) {
+//     return 65;
+//   } else {
+//     return 80;
+//   }
+// }
+
+// console.log(sumReturner(3, 80));
+
+// Sees if a value, sum, and/ or difference of two values equals 8.
+
+// function operationsof8(a, b) {
+//   if (a === 8 || b === 8 || a + b === 8 || a - b === 8 || b - a === 8) {
+//     return "Yes, one of the values, sums and / or differences is 8.";
+//   } else {
+//     return "Nope, none of the possible values are 8";
+//   }
+// }
+
+// console.log(operationsof8(6, 6));
