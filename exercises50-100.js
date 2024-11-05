@@ -101,14 +101,27 @@
 
 // console.log(connect2AndRemove("burger", "sandwich"));
 
-// takes in a 3 value array and returns the sum of them all.
+// takes in an array and returns the sum of them all.
 
-function additionofAll(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+// function additionofAll(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   return sum;
+// }
+
+// console.log(additionofAll([3, 5, 81]));
+
+// #67. Write a JavaScript program to create a new string from a given string. This program removes the first and last characters of the string if the first or last character is 'P'. Return the original string if the condition is not satisfied.
+
+function removeP(str) {
+  let arr = str.split("");
+  if (arr[0].toLowerCase() === "p" || arr[arr.length - 1].toLowerCase === "p") {
+    arr.splice(0, 1);
+    arr.pop();
   }
-  return sum;
+  return arr;
 }
 
-console.log(additionofAll([3, 5, 81]));
+console.log(removeP("Potato"));
