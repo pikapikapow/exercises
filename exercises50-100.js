@@ -83,3 +83,32 @@
 // }
 
 // console.log(discriminant(1, 5, 3));
+
+// takes in 2 strings and connects them but removes their first character.
+
+// function connect2AndRemove(str1, str2) {
+//   let arr1 = str1.split("");
+//   arr1.splice(0, 1);
+//   let arr2 = str2.split("");
+//   arr2.splice(0, 1);
+//   let removedstr1 = arr1.toString();
+//   let finalstr1 = removedstr1.replace(/,/g, "");
+//   let removedstr2 = arr2.toString();
+//   let finalstr2 = removedstr2.replace(/,/g, "");
+//   let connected = finalstr1 + finalstr2;
+//   return connected;
+// }
+
+// console.log(connect2AndRemove("burger", "sandwich"));
+
+// takes in a 3 value array and returns the sum of them all.
+
+function additionofAll(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+console.log(additionofAll([3, 5, 81]));
