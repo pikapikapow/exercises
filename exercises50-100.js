@@ -128,9 +128,85 @@
 
 // #70 returns a given array of integers of length 3 that is rotated to the left.
 
-function leftRotator(arr) {
-  const rotated = [arr[1], arr[2], arr[0]];
-  return rotated;
-}
+// function leftRotator(arr) {
+//   const rotated = [arr[1], arr[2], arr[0]];
+//   return rotated;
+// }
 
-console.log(leftRotator([3, 4, 5]));
+// console.log(leftRotator([3, 4, 5]));
+
+// #71 checks if 1 is the first or last value in an array of integers
+
+// function isit1(arr) {
+//   if (arr[0] === 1 && arr[arr.length - 1] === 1) {
+//     return "Yes, both the first and last values of the array equal one.";
+//   } else if (arr[0] === 1) {
+//     return "Yes, the first value is equal to one.";
+//   } else if (arr[arr.length - 1] === 1) {
+//     return "Yes, the last value is equal to one.";
+//   } else {
+//     return "No, the first nor the last value is one.";
+//   }
+// }
+
+// console.log(isit1([2, 3]));
+
+// #72 checks if the first and last value of an array are the same.
+
+// function firstLastSame(arr) {
+//   if (arr[0] === arr[arr.length - 1]) {
+//     return "Yes, the last and first values of the array are the same.";
+//   } else {
+//     return "Nope, the first and last values are different.";
+//   }
+// }
+
+// console.log(firstLastSame([3, 4, 5]));
+
+// #73 returns the values of an array reversed
+
+// function reverser(arr) {
+//   let reversedArray = arr.reverse();
+//   return reversedArray;
+// }
+
+// console.log(reverser([3, 5, 6]));
+
+// #74 Finds the greatest value in the entire array, and sets the array to only that big value.
+
+// function allToBig(arr) {
+//   let theBig = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       theBig = arr[i];
+//     }
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i] = theBig;
+//   }
+//   return arr;
+// }
+
+// console.log(allToBig([3, 4, 50]));
+
+// #75 takes the two middle elements of two arrays that are length 3 and makes another array of those two.
+
+// function middleTwoTogether(arr1, arr2) {
+//   let middle1 = arr1[1];
+//   let middle2 = arr2[1];
+//   let middleConnected = [middle1, middle2];
+//   return middleConnected;
+// }
+
+// console.log(middleTwoTogether([3, 4, 5], [3, 9, 5]));
+
+// #76 takes the first and last elements of an array and makes another array out of them.
+
+// function firstLastTogether(arr) {
+//   const first = arr[0];
+//   const last = arr[arr.length - 1];
+//   let newArray = [first, last];
+//   return newArray;
+// }
+
+// console.log(firstLastTogether([3, 4, 6]));
