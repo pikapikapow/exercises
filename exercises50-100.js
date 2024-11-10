@@ -210,3 +210,62 @@
 // }
 
 // console.log(firstLastTogether([3, 4, 6]));
+
+// #77 Sees if one of two values in an array is 1 or 3
+
+// function isit1or3(arr) {
+//   let istherea1or3 = false;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 1 || arr[i] === 3) {
+//       istherea1or3 = true;
+//     }
+//   }
+//   if (istherea1or3 === true) {
+//     return "Yes, one or both of the values is 1 or 3.";
+//   } else {
+//     return "Nope, none of the values are 1 or 3.";
+//   }
+// }
+
+// console.log(isit1or3([2, 2]));
+
+// #78 Sees if 1 or 3 is not in an array.
+
+// function isItNot1or3(arr) {
+//   let istherea1or3 = false;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 1 || arr[i] === 3) {
+//       istherea1or3 = true;
+//     }
+//   }
+//   if (istherea1or3 === true) {
+//     return "Nope, one or both of the values is 1 or 3.";
+//   } else {
+//     return "Yes, none of the values are 1 or 3.";
+//   }
+// }
+
+// console.log(isItNot1or3([3, 1]));
+
+// #79 Sees if 30 and 40 are in an array twice.
+
+function twice30And40(arr) {
+  let numberOf30 = 0;
+  let numberOf40 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 30) {
+      numberOf30++;
+    } else if (arr[i] === 40) {
+      numberOf40++;
+    }
+  }
+  if (numberOf30 > 2 || numberOf40 > 2) {
+    return "There are too many 30s, 40s, or both.";
+  } else if (numberOf30 === 2 && numberOf40 === 2) {
+    return "Yes, there is 30 and 40 twice in the array.";
+  } else {
+    return "Nope, there are too little 30s and / or 40s.";
+  }
+}
+
+console.log(twice30And40([30, 40, 30]));
