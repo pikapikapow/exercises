@@ -249,23 +249,113 @@
 
 // #79 Sees if 30 and 40 are in an array twice.
 
-function twice30And40(arr) {
-  let numberOf30 = 0;
-  let numberOf40 = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 30) {
-      numberOf30++;
-    } else if (arr[i] === 40) {
-      numberOf40++;
+// function twice30And40(arr) {
+//   let numberOf30 = 0;
+//   let numberOf40 = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 30) {
+//       numberOf30++;
+//     } else if (arr[i] === 40) {
+//       numberOf40++;
+//     }
+//   }
+//   if (numberOf30 > 2 || numberOf40 > 2) {
+//     return "There are too many 30s, 40s, or both.";
+//   } else if (numberOf30 === 2 && numberOf40 === 2) {
+//     return "Yes, there is 30 and 40 twice in the array.";
+//   } else {
+//     return "Nope, there are too little 30s and / or 40s.";
+//   }
+// }
+
+// console.log(twice30And40([30, 40, 30]));
+
+// #80 Swaps the first and last values in an array.
+
+// function firstLastSwap(arr) {
+//   let firstValue = arr[0];
+//   let lastValue = arr[arr.length - 1];
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i === 0) {
+//       newArr.push(lastValue);
+//     } else if (i === arr.length - 1) {
+//       newArr.push(firstValue);
+//     } else {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(firstLastSwap([3, 4, 5]));
+
+// #81 Adds two digits a given integer.
+
+// function twoDigitAdder(integer) {
+//   let numStr = integer.toString();
+//   let digitsStr = "22";
+
+//   let resultStr = numStr + digitsStr;
+//   let result = parseInt(resultStr);
+//   return result;
+// }
+
+// console.log(twoDigitAdder(32));
+
+// #82 add two integers without carrying
+
+// function add_two_int_without_carrying(n1, n2) {
+//   var result = 0,
+//     x = 1;
+
+//   while (n1 > 0 && n2 > 0) {
+//     result += x * ((n1 + n2) % 10);
+//     n1 = Math.floor(n1 / 10);
+//     n2 = Math.floor(n2 / 10);
+//     x *= 10;
+//   }
+
+//   return result;
+// }
+
+// console.log(add_two_int_without_carrying(222, 911));
+
+// #83 finds the longest string out of an array of them.
+
+// function longest_string(str_ara) {
+//   var max = str_ara[0].length;
+//   str_ara.map((v) => (max = Math.max(max, v.length)));
+//   result = str_ara.filter((v) => v.length == max);
+//   return result;
+// }
+// console.log(longest_string(["a", "aa", "aaa", "aaaaa", "aaaa"]));
+
+// #84 Finds the type of angle a given angle is.
+
+function angleFinder(angle) {
+  if (angle > 180) {
+    angle = angle - 180;
+    if (angle > 0 && angle < 90) {
+      return "the angle is acute.";
+    } else if (angle === 90) {
+      return "the angle is a right angle.";
+    } else if (angle > 90 && angle < 180) {
+      return "the angle is obtuse.";
+    } else if (angle === 180) {
+      return "the angle is straight.";
     }
-  }
-  if (numberOf30 > 2 || numberOf40 > 2) {
-    return "There are too many 30s, 40s, or both.";
-  } else if (numberOf30 === 2 && numberOf40 === 2) {
-    return "Yes, there is 30 and 40 twice in the array.";
   } else {
-    return "Nope, there are too little 30s and / or 40s.";
+    if (angle > 0 && angle < 90) {
+      return "the angle is acute.";
+    } else if (angle === 90) {
+      return "the angle is a right angle.";
+    } else if (angle > 90 && angle < 180) {
+      return "the angle is obtuse.";
+    } else if (angle === 180) {
+      return "the angle is straight.";
+    }
   }
 }
 
-console.log(twice30And40([30, 40, 30]));
+console.log(angleFinder(360));
