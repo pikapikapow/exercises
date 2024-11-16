@@ -331,31 +331,103 @@
 // }
 // console.log(longest_string(["a", "aa", "aaa", "aaaaa", "aaaa"]));
 
-// #84 Finds the type of angle a given angle is.
+// #86 Finds the type of angle a given angle is.
 
-function angleFinder(angle) {
-  if (angle > 180) {
-    angle = angle - 180;
-    if (angle > 0 && angle < 90) {
-      return "the angle is acute.";
-    } else if (angle === 90) {
-      return "the angle is a right angle.";
-    } else if (angle > 90 && angle < 180) {
-      return "the angle is obtuse.";
-    } else if (angle === 180) {
-      return "the angle is straight.";
-    }
+// function angleFinder(angle) {
+//   if (angle > 180) {
+//     angle = angle - 180;
+//     if (angle > 0 && angle < 90) {
+//       return "the angle is acute.";
+//     } else if (angle === 90) {
+//       return "the angle is a right angle.";
+//     } else if (angle > 90 && angle < 180) {
+//       return "the angle is obtuse.";
+//     } else if (angle === 180) {
+//       return "the angle is straight.";
+//     }
+//   } else {
+//     if (angle > 0 && angle < 90) {
+//       return "the angle is acute.";
+//     } else if (angle === 90) {
+//       return "the angle is a right angle.";
+//     } else if (angle > 90 && angle < 180) {
+//       return "the angle is obtuse.";
+//     } else if (angle === 180) {
+//       return "the angle is straight.";
+//     }
+//   }
+// }
+
+// console.log(angleFinder(360));
+
+// #87 Sees if two arrays are similar
+
+// function array_checking(arra1, arra2) {
+//   for (var i = 0; i < arra1.length; i++) {
+//     for (var j = i; j < arra1.length; j++) {
+//       var result = true,
+//         temp = arra1[i];
+
+//       arra1[i] = arra1[j];
+//       arra1[j] = temp;
+
+//       for (var k = 0; k < arra1.length; k++) {
+//         if (arra1[k] !== arra2[k]) {
+//           result = false;
+//           break;
+//         }
+//       }
+
+//       if (result) {
+//         return true;
+//       }
+
+//       arra1[j] = arra1[i];
+//       arra1[i] = temp;
+//     }
+//   }
+
+//   return false;
+// }
+
+// console.log(array_checking([10, 20, 30], [10, 20, 30]));
+// console.log(array_checking([10, 20, 30], [30, 10, 20]));
+// console.log(array_checking([10, 20, 30, 40], [10, 30, 20, 40]));
+
+// // #88 function that takes two integers and a divisor. If the given divisor divides both integers and does not divide either,
+// // two specified integers are similar. Check whether two integers are similar or not.
+
+// // Function to check if two numbers are both divisible or not divisible by a given divisor
+// function checking_numbers(x, y, divisor) {
+//   // Check if both x and y are divisible by the divisor or not divisible by the divisor
+//   if (
+//     (x % divisor === 0 && y % divisor === 0) ||
+//     (x % divisor !== 0 && y % divisor !== 0)
+//   ) {
+//     return true; // Return true if the condition is satisfied
+//   }
+//   return false; // Return false if the condition is not satisfied
+// }
+
+// // Example usage
+// console.log(checking_numbers(10, 25, 5)); // true
+// console.log(checking_numbers(10, 20, 5)); // true
+// console.log(checking_numbers(10, 20, 4));
+
+// #89 Checks if a variable can get changed into an operator to be correct.
+
+function newOperator(x, y, z) {
+  if (x * y === z) {
+    return "True";
+  } else if (x / y === z) {
+    return "True";
+  } else if (x + y === z) {
+    return "True";
+  } else if (x - y) {
+    return "True";
   } else {
-    if (angle > 0 && angle < 90) {
-      return "the angle is acute.";
-    } else if (angle === 90) {
-      return "the angle is a right angle.";
-    } else if (angle > 90 && angle < 180) {
-      return "the angle is obtuse.";
-    } else if (angle === 180) {
-      return "the angle is straight.";
-    }
+    return "false";
   }
 }
 
-console.log(angleFinder(360));
+console.log(newOperator(3, 1, 3));
