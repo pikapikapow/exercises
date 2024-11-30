@@ -416,18 +416,94 @@
 
 // #89 Checks if a variable can get changed into an operator to be correct.
 
-function newOperator(x, y, z) {
-  if (x * y === z) {
-    return "True";
-  } else if (x / y === z) {
-    return "True";
-  } else if (x + y === z) {
-    return "True";
-  } else if (x - y) {
-    return "True";
-  } else {
-    return "false";
+// function newOperator(x, y, z) {
+//   if (x * y === z) {
+//     return "True";
+//   } else if (x / y === z) {
+//     return "True";
+//   } else if (x + y === z) {
+//     return "True";
+//   } else if (x - y) {
+//     return "True";
+//   } else {
+//     return "false";
+//   }
+// }
+
+// console.log(newOperator(3, 1, 3));
+
+// #92 (90 and 91 dont make sense) find the maximum difference between two integers in an array.
+
+// function maxDiff(arr) {
+//   let theBigDiff = 0;
+//   for (let i = 0; i <= arr.length; i++) {
+//     if (i === 0) {
+//       if ((arr[i] -= arr[i + 1]) >= theBigDiff) {
+//         theBigDiff = arr[i] -= arr[i + 1];
+//       }
+//     } else if (i === arr.length - 1) {
+//       if ((arr[i] -= arr[i - 1]) >= theBigDiff) {
+//         theBigDiff = arr[i] -= arr[i + 1];
+//       }
+//     } else {
+//       if ((arr[i] -= arr[i + 1]) >= theBigDiff) {
+//         theBigDiff = arr[i] -= arr[i + 1];
+//       } else if ((arr[i] -= arr[i - 1]) >= theBigDiff) {
+//         theBigDiff = arr[i] -= arr[i + 1];
+//       }
+//     }
+//   }
+//   return theBigDiff;
+// }
+
+// console.log(maxDiff([3, 4, 5, 6, 9]));
+
+// #93 finds the maximum difference across any two pairs in an array.
+// function arrayMaxDiff(arr) {
+//   var max_result = 0;
+
+//   for(var i = 0; i < arr.length; i++) {
+
+//       for(var k = 0; k !== i && k < arr.length; k++) {
+//           var diff = Math.abs(arr[i] - arr[k]);
+//           max_result = Math.max(max_result, diff);
+//       }
+//   }
+
+//   return max_result;
+// }
+
+// console.log(array_max_diff([1, 2, 3, 8, 9]));
+// console.log(array_max_diff([1, 2, 3, 18, 9]));
+// console.log(array_max_diff([13, 2, 3, 8, 9]));
+
+// #94 finds the most frequent number in an array
+
+// function arrayElementFrequency(arr) {
+//   let ctr = [],
+//     ans = 0;
+//   for (let i = 0; i < 10; i++) {
+//     ctr.push(0);
+//   }
+//   for (var i = 0; i < arr.length; i++) {
+//     ctr[arr[i] - 1]++;
+//     if (ctr[arr[i] - 1] > ctr[ans]) {
+//       ans = arr[i] - 1;
+//     }
+//   }
+//   return ans + 1;
+// }
+
+// console.log(arrayElementFrequency([3, 3, 4, 3, 3, 5, 6]));
+
+// #95 REplace all numbers in an array with another number.
+
+function replaceNumbers(arr, num) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(num);
   }
+  return newArr;
 }
 
-console.log(newOperator(3, 1, 3));
+console.log(replaceNumbers([3, 4, 5, 6, 7], 3));
