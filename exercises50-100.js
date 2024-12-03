@@ -498,12 +498,112 @@
 
 // #95 REplace all numbers in an array with another number.
 
-function replaceNumbers(arr, num) {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(num);
-  }
-  return newArr;
-}
+// function replaceNumbers(arr, num) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(num);
+//   }
+//   return newArr;
+// }
 
-console.log(replaceNumbers([3, 4, 5, 6, 7], 3));
+// console.log(replaceNumbers([3, 4, 5, 6, 7], 3));
+
+// #96 Finds the sum of the absolute differences of consecutive numbers in an array
+
+// function sumOfAbsDiff(arr) {
+//   let result = 0;
+//   for (let i = 1; i < arr.length; i++) {
+//     result += Math.abs(arr[i] - arr[i - 1]);
+//   }
+//   return result;
+// }
+
+// console.log(sumOfAbsDiff([3, 3, 4, 5]));
+
+// #97 Builds a palindrome from a given string
+
+// function buildPalindrome(new_str) {
+//   var flag;
+//   for (let i = new_str.length; ; i++) {
+//     flag = true;
+//     for (let j = 0; j < i - j - 1; j++) {
+//       if (i - j - 1 < new_str.length && new_str[j] != new_str[i - j - 1]) {
+//         flag = false;
+//         break;
+//       }
+//     }
+//     if (flag) {
+//       for (let j = new_str.length; j < i; j++) {
+//         new_str += new_str[i - j - 1];
+//       }
+//       return new_str;
+//     }
+//   }
+// }
+
+// console.log(buildPalindrome("abcddc"));
+// console.log(buildPalindrome("122"));
+
+// #98 Changes the case of a string based on how many uppercase and lowercase letters they have.
+
+// function changeCase(newStr) {
+//   let lower = 0;
+//   let upper = 0;
+//   for (let i = 0; i < newStr.length; i++) {
+//     if (/[A-Z]/.test(newStr[i])) {
+//       upper++;
+//     } else {
+//       lower++;
+//     }
+//   }
+
+//   if (lower > upper) {
+//     return newStr.toLowerCase();
+//   } else if (lower === upper) {
+//     return newStr;
+//   } else {
+//     return newStr.toUpperCase();
+//   }
+// }
+
+// console.log(changeCase("cheeSY"));
+
+// // #99 Finds out if the characters in one array can be rearranged into another
+
+// function rearrangementCharacters(str1, str2) {
+//   var first_set = str1.split(""),
+//     second_set = str2.split(""),
+//     result = true;
+
+//   first_set.sort();
+//   second_set.sort();
+//   for (var i = 0; i < Math.max(first_set.length, second_set.length); i++) {
+//     if (first_set[i] !== second_set[i]) {
+//       result = false;
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(rearrangementCharacters("xyz", "zyx"));
+// console.log(rearrangementCharacters("xyz", "zyp"));
+
+// #100! Find if at least one element is in both sets of given arrays.
+
+// function similarElement(arr1, arr2) {
+//   let commonElement = false;
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr2.includes(arr1[i])) {
+//       commonElement = true;
+//     }
+//   }
+
+//   if (commonElement === true) {
+//     return "Yes! There is a common element.";
+//   } else {
+//     return "Nope, there is not a common element.";
+//   }
+// }
+
+// console.log(similarElement([3, 4, 5], [7, 7, 9]));
