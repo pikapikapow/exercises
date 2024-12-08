@@ -111,13 +111,14 @@
 // console.log(underButClose([3, 6, 7, 10], 5));
 
 // #105 Finds number of times to replace a number with the sum of its digits until it is a one digit number
-
+let counter = 0;
 function sumDigitReplace(num) {
   let checkedDigit = checkDigits(num);
+
   if (checkedDigit >= 10) {
     checkedDigit = checkDigits(checkedDigit);
   }
-  console.log(checkedDigit);
+  console.log(`It took ${counter} times to get ${checkedDigit}`);
 }
 
 function checkDigits(num) {
@@ -132,8 +133,9 @@ function checkDigits(num) {
       digitSum += +dig;
       oneDigit = digitSum;
     }
+    counter++;
   }
   return oneDigit;
 }
 
-sumDigitReplace(2);
+sumDigitReplace(282738);
