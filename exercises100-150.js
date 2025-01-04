@@ -111,31 +111,76 @@
 // console.log(underButClose([3, 6, 7, 10], 5));
 
 // #105 Finds number of times to replace a number with the sum of its digits until it is a one digit number
-let counter = 0;
-function sumDigitReplace(num) {
-  let checkedDigit = checkDigits(num);
+// function sumDigitReplace(num) {
+//   let counter = 0;
 
-  if (checkedDigit >= 10) {
-    checkedDigit = checkDigits(checkedDigit);
-  }
-  console.log(`It took ${counter} times to get ${checkedDigit}`);
-}
+//   while (num >= 10) {
+//     num = num
+//       .toString()
+//       .split("")
+//       .reduce((sum, eachDigit) => sum + Number(eachDigit), 0);
+//     counter++;
+//   }
+//   console.log(`It took ${counter} times to get ${num}`);
+// }
 
-function checkDigits(num) {
-  let oneDigit;
-  let digitSum = 0;
-  if (num >= 0 && num <= 9) {
-    oneDigit = num;
-  } else {
-    let digitsArr = num.toString().split("");
+// sumDigitReplace(29297);
 
-    for (const dig of digitsArr) {
-      digitSum += +dig;
-      oneDigit = digitSum;
-    }
-    counter++;
-  }
-  return oneDigit;
-}
+// #106 Divides integers until the result is an integer/
 
-sumDigitReplace(282738);
+// function dividingIntegers(num, d) {
+//   if (d === 1) {
+//     return num;
+//   } else {
+//     while (num % d === 0) {
+//       num /= d;
+//     }
+//     return num;
+//   }
+// }
+
+// console.log(dividingIntegers(3, 1));
+
+// function arr_pairs(arr) {
+//   let result = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//       for (let j = i + 1; j < arr.length; j++) {
+
+//           if (arr[i] % arr[j] === 0 || arr[j] % arr[i] === 0) {
+//               result++;
+//           }
+//       }
+//   }
+
+//   return result;
+// }
+
+// console.log(arr_pairs([1, 2, 3]));
+// console.log(arr_pairs([2, 4, 6]));
+
+// The exercises before dont make sense, so #111. Find the unique number in a set of three.
+
+// function uniqueOfThree(x, y, z) {
+//   if (x === y) {
+//     return z;
+//   } else if ((y = z)) {
+//     return x;
+//   } else if ((x = z)) {
+//     return y;
+//   } else {
+//     return "All three numbers are unique.";
+//   }
+// }
+
+// console.log(uniqueOfThree(1, 2, 2));
+
+// #114 Checks if the sentence given is correct.
+
+// function isCorrectSentence(input_str) {
+//   var first_char = input_str[0];
+//   var last_char = input_str[input_str.length - 1];
+//   return /[A-Z]/.test(first_char) && last_char == ".";
+// }
+
+// console.log(isCorrectSentence("Big sandwiches have a lot of sandwich."));
